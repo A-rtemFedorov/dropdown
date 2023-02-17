@@ -1,0 +1,27 @@
+.container {
+    margin: 0 auto;
+    max-width: 1366px;
+    
+}
+
+$primary-revers: linear-gradient(106.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+$primary-main:  linear-gradient(-96.78deg, #F64D4D -57.09%, #4D5EF6 101.17%);
+$primary-light: linear-gradient(106.78deg, #ffdfdf -50.09%, #e2e5ff 101.17%);
+$secondary-main: #000;
+$white-main: #fff;
+$white-dark: #E5E5E5;
+$red-main: #FF4343;
+$red-light: #f8edff;
+
+@import 'util/reset';
+@import 'libs/fonts';
+@import 'libs/slick';
+@import 'main-page/header';
+@import 'main-page/nav';
+@import 'main-page/preview';
+@import 'main-page/catalog';
+@import 'main-page/slider';
+@import 'main-page/pool';
+@import 'main-page/shops';
+@import 'main-page/viewed';
+@import 'main-page/footer';

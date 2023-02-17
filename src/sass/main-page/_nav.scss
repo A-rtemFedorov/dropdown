@@ -1,0 +1,135 @@
+.nav {
+    padding: 10px 0 28px 0;
+    z-index: 10000;
+    &__items {
+        padding: 0 43px;
+        display: flex;
+        align-items: center;
+    }
+    &__catalog {
+        position: relative;
+        min-width: 77px;
+        min-height: 76px;
+        background-image: $primary-main;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__lines {
+        width: 30px;
+        height: 28px;
+        display: block;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.4s ease-in-out;
+    }
+    &__line {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: $white-main;
+        border-radius: 4px;
+    }
+    .line-one {
+        transform-origin: -9% 150%;
+        transition: transform 0.4s ease-in-out;
+    } 
+    .line-two {
+        transition: transform 0.2s ease-in-out;
+    }
+    .line-three {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    } 
+    &__checkbox {
+        position: absolute;
+        display: block;
+        height: 77px;
+        width: 77px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked ~ .nav__lines .line-one {
+        transform: rotate(45deg);
+    }  
+    input[type="checkbox"]:checked ~ .nav__lines .line-two {
+        transform: scaleY(0);
+    }  
+    input[type="checkbox"]:checked ~ .nav__lines .line-three {
+        transform: rotate(-45deg);
+    }
+    input[type="checkbox"]:checked ~ .nav__lines {
+        transform: translateX(12%);
+    }
+    input[type="checkbox"]:checked ~ .catalog {
+        scale: 1;
+        top: 137%;
+    }
+    &__logo {
+        margin-left: 32px;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-left: 32px;
+    }
+    &__input {
+        width: 510px;
+        height: 46px;
+        padding-left: 120px;
+        font-size: 20px;
+        border: 3px solid;
+        border-image: $primary-revers;
+        -moz-border-image: $primary-revers;
+        -webkit-border-image: $primary-revers;
+        border-image-slice: 1;
+    }
+    &__searchbtn {
+        position: absolute;
+        width: 96px;
+        height: 38px;
+        top: center;
+        left: 6px;
+        background-color: $red-light;
+        opacity: 0.9;
+        border: none;
+        cursor: pointer;
+    }
+    &__glass {
+        position: absolute;
+        right: 20px;
+        top: center;
+        cursor: pointer;
+    }
+    &__icons {
+        display: flex;
+        margin-left: 40px;
+        width: 100%;
+        height: 100%
+    }
+    &__checkin, &__favorites, &__curt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 45px;
+        height: 100%;
+        cursor: pointer;
+        &:hover {
+            scale: 1.2;
+            transition: 0.3s;
+        }
+        &:last-child {
+            margin: 0;
+        }
+    }
+    &__text {
+        margin-top: 5px;
+    }
+}

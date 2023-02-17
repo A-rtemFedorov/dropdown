@@ -1,0 +1,53 @@
+.carousel {
+    margin-left: 30.5px;
+    width: 953px;
+    height: 100%;
+    position: relative; 
+    &__slide {
+        height: 100%;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    button {
+        position: absolute;
+        font-size: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        z-index: 4;
+        cursor: pointer;
+        &:hover {
+            transition: 0.2s;
+            transform: scale(1.1) translateY(-45%);
+        }
+    }
+    .slick-prev {
+        opacity: 0.2;
+        position: absolute;
+        left: 20px;
+        background: $primary-main;
+        &:after {
+            content: url(../../img/slick-prev.svg);
+        }
+    }
+    .slick-next {
+        position: absolute;
+        right: 20px;
+        background: $primary-revers;
+        &:after {
+            content: url(../../img/slick-next.svg);
+        }
+    }
+    .slick-list {
+        height:  100%;
+    }
+}
+
+.catalog__main:hover .carousel {
+    display: none;
+}

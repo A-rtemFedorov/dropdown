@@ -1,0 +1,34 @@
+.viewed {
+    margin-top: 28px;
+    background-image: $primary-light;
+    &__items {
+        padding: 27px 43px;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-column-gap: 18.5px;
+        margin-top: 40px;
+    }
+    &__shadow-position {
+        width: 241px;
+        height: 180.5px;
+    }
+    &__card {
+        padding: 36px 14px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        background-color: $white-main;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            scale: 1.1;
+            transition: 0.5s;
+        }
+    }
+    &__price {
+        margin-top: 14px;
+    }
+}
